@@ -14,7 +14,7 @@ services:
       retries: 3
       start_period: 40s
   web:
-    build: ./api_yamdb/Dockerfile
+    image: yauhenitsuran/actions
     restart: on-failure
     volumes:
       - static_value:/app/static/
