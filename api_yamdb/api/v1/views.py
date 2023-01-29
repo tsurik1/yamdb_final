@@ -5,39 +5,22 @@ from django.db import IntegrityError
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import status, mixins, viewsets, filters
-from rest_framework.decorators import api_view
-from rest_framework.permissions import (
-    IsAuthenticated,
-    IsAuthenticatedOrReadOnly
-)
+from rest_framework import filters, mixins, status, viewsets
+from rest_framework.decorators import action, api_view
+from rest_framework.permissions import (IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
-from rest_framework.decorators import action
 from rest_framework_simplejwt.tokens import AccessToken
 
 from api.v1.filters import TitleFilter
-from api.v1.permissions import (
-    IsAdmin,
-    IsAdminOrReadOnly,
-    IsAuthorModeratorAdminOrReadOnly
-)
-from api.v1.serializers import (
-    CategorySerializer,
-    GenreSerializer,
-    TitleReadSerializer,
-    TitleWriteSerializer,
-    ReviewSerializer,
-    CommentSerializer,
-    SignupSerializer,
-    UserSerializer,
-    TokenSerializer,
-)
-from reviews.models import (
-    Category,
-    Genre,
-    Title,
-    Review,
-)
+from api.v1.permissions import (IsAdmin, IsAdminOrReadOnly,
+                                IsAuthorModeratorAdminOrReadOnly)
+from api.v1.serializers import (CategorySerializer, CommentSerializer,
+                                GenreSerializer, ReviewSerializer,
+                                SignupSerializer, TitleReadSerializer,
+                                TitleWriteSerializer, TokenSerializer,
+                                UserSerializer)
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
 
