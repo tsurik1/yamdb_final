@@ -14,7 +14,7 @@ services:
       retries: 3
       start_period: 40s
   web:
-    image: yauhenitsuran/actions
+    image: yauhenitsuran/apiyamdb
     restart: on-failure
     volumes:
       - static_value:/app/static/
