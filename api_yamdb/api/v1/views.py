@@ -1,3 +1,11 @@
+from api.v1.filters import TitleFilter
+from api.v1.permissions import (IsAdmin, IsAdminOrReadOnly,
+                                IsAuthorModeratorAdminOrReadOnly)
+from api.v1.serializers import (CategorySerializer, CommentSerializer,
+                                GenreSerializer, ReviewSerializer,
+                                SignupSerializer, TitleReadSerializer,
+                                TitleWriteSerializer, TokenSerializer,
+                                UserSerializer)
 from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
@@ -11,15 +19,6 @@ from rest_framework.permissions import (IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
-from api.v1.filters import TitleFilter
-from api.v1.permissions import (IsAdmin, IsAdminOrReadOnly,
-                                IsAuthorModeratorAdminOrReadOnly)
-from api.v1.serializers import (CategorySerializer, CommentSerializer,
-                                GenreSerializer, ReviewSerializer,
-                                SignupSerializer, TitleReadSerializer,
-                                TitleWriteSerializer, TokenSerializer,
-                                UserSerializer)
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
 

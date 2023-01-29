@@ -1,7 +1,6 @@
 from django.conf import settings
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
-
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
 
