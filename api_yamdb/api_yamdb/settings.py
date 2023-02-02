@@ -7,7 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'h_dr_qukd)ra#jso)!ck&wvp4)#mou986^jl^=_rjl
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'web']
+ALLOWED_HOSTS = ['localhost', 'web', '51.250.80.122', 'yatubetsurik.ddns.net']
 
 AUTH_USER_MODEL = 'users.User'
 
