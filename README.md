@@ -59,6 +59,9 @@ Response
 }
 ```
 
+## ip address/domain
+51.250.13.249/tsurik.ddns.net
+
 ## Developers
 [Sergey Afonin](https://github.com/afoninsb)
 [Vadim Kovalev](https://github.com/Parker-ink)
