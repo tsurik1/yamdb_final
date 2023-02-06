@@ -17,7 +17,7 @@ services:
     image: yauhenitsuran/apiyamdb
     restart: on-failure
     volumes:
-      - static_value:/app/static/
+      - static_value:/app/data/
       - media_value:/app/media/
     depends_on:
       - db
