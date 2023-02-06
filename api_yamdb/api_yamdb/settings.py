@@ -110,13 +110,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/data/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'data')
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = ['/app/data']
+STATICFILES_DIRS = ['/app/static']
 
 UNUSED_USERNAME = 'me'
 
